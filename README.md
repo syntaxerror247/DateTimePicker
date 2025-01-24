@@ -31,3 +31,7 @@
   - year: Selected year
   - hour: Selected hour (0–23)  
   - minute: Selected minute (0–59)
+  
+## Screenshots
+![1000187047](https://github.com/user-attachments/assets/80120b77-ee07-4a36-993a-bd97931059f4)
+![1000187048](https://github.com/user-attachments/assets/44217d6a-cdd1-4cb9-8938-4d1b9799ed21)
