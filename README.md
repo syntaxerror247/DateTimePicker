@@ -14,18 +14,18 @@
 - `pickTime(is24HourView: bool)`: Displays a time picker dialog. Emits the `onTimePicked` signal when a time is selected.
     - is24HourView: If `true`, the time picker will display in 24-hour format. If `false`, it will display in 12-hour format.
       
-- `pickDateTime(is24HourView)`: Displays both date and time picker dialogs in sequence. Emits the `onDateTimePicked` signal when both are selected.
+- `pickDateTime(is24HourView: bool)`: Displays both date and time picker dialogs in sequence. Emits the `onDateTimePicked` signal when both are selected.
     - is24HourView: If `true`, the time picker will display in 24-hour format. If `false`, it will display in 12-hour format.
 
 ## Signals
-- `onDatePicked(Dictionary date)`
+- `onDatePicked(date: Dictionary)`
   - day: Selected day
   - month: Selected month (1–12)
   - year: Selected year
-- `onTimePicked(Dictionary time)` 
+- `onTimePicked(time: Dictionary)` 
   - hour: Selected hour (0–23)  
   - minute: Selected minute (0–59)  
-- `onDateTimePicked(Dictionary dateTime)`
+- `onDateTimePicked(deteTime: Dictionary)`
   - day: Selected day
   - month: Selected month (1–12)
   - year: Selected year
