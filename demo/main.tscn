@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg3hylang5fxn"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_j0gfq"]
+[ext_resource type="Texture2D" uid="uid://b3hbt6hh5dykq" path="res://icon.png" id="2_o6582"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pihwh"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.111197, 0.111197, 0.111197, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j0gfq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_o6582")
+stretch_mode = 5
+
+[node name="datetime_picker" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "show DateTime picker"
+
+[node name="date_picker" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "show Date picker"
+
+[node name="time_picker" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "show Time picker"
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "-----Console Log-----"
+horizontal_alignment = 1
+
+[node name="console" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_pihwh")
+
+[connection signal="pressed" from="VBoxContainer/datetime_picker" to="." method="_on_datetime_picker_pressed"]
+[connection signal="pressed" from="VBoxContainer/date_picker" to="." method="_on_date_picker_pressed"]
+[connection signal="pressed" from="VBoxContainer/time_picker" to="." method="_on_time_picker_pressed"]
